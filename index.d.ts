@@ -1,2 +1,2 @@
 
-export * from './lib/index';
+export * from './lib/asb-dnd.module';
