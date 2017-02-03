@@ -1,1 +1,1 @@
-exports.AsbDragAndDropModule = require('./lib/asb-dnd.module').AsbDragAndDropModule;
+exports.AsbDragAndDropModule = require('./lib/asb-dnd.module');
