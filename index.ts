@@ -1,1 +1,1 @@
-export * from './src/asb-dnd.module'
+export * from './src/asb-dnd_module'

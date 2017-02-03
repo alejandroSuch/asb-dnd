@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
-import { AsbDraggableDirective } from './directives/asb-draggable.directive';
-import { AsbDroppableDirective } from './directives/asb-droppable.directive';
+import { AsbDraggableDirective } from './directives/asb-draggable_directive';
+import { AsbDroppableDirective } from './directives/asb-droppable_directive';
 
 @NgModule({
   imports     : [],
