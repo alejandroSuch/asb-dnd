@@ -41,30 +41,22 @@ export class MyApplicationModule {
 
 #### Attributes
 
+|Attribute   	                  | Type   	          | Default  	    | Description
+|---	                          |---	              |---	          |---	        
+| `asbDraggable`  	            | `@Input()`   	    | false  	      |  Converts the component into an HTML _draggable_  	        
+| `asbDraggableData`  	        | `@Input()`  	    | `null`        |  This will be the payload associated to the drag event.   
+| `asbDraggableType`  	        | `@Attribute()`    | `draggable`   |  Type of the draggable
 
 
 
 ### asbDroppable
+`asbDroppable` enables dropping of _draggables_ on a given component. This directive accetps a comma-separated list of `asbDraggableType`s.
 
+If the draggable type is accepted by this droppable, class `dragover` is added to the component. In other case, then classes will be `dragover` and `forbidden` added.
 
+#### Attributes
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-m       fuy¡
+|Attribute   	                  | Type   	          | Default  	    | Description
+|---	                          |---	              |---	          |---	        
+| `onDrop`  	                  | `@Output()`  	    |       	      |  Event to emit when a drop has occured
+| `asbDroppable`      	        | `@Attribute()`    | `draggable`   |  Comma-separated list of `asbDraggableType`s
