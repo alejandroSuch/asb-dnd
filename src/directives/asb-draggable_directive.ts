@@ -23,9 +23,9 @@ export class AsbDraggableDirective implements OnChanges {
     let change: SimpleChange = changes['isDraggable'];
 
     if (change && change.currentValue) {
-      this.renderer.invokeElementMethod(this.element.nativeElement, 'setAttribute', ['draggable', 'true']);
+      this.renderer.setElementAttribute(this.element.nativeElement, 'draggable', 'true');
     } else {
-      this.renderer.invokeElementMethod(this.element.nativeElement, 'setAttribute', ['draggable', 'false']);
+      this.renderer.setElementAttribute(this.element.nativeElement, 'draggable', 'false');
     }
   }
 }
