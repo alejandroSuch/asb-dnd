@@ -1,4 +1,4 @@
-import {Attribute, Directive, ElementRef, HostListener, Input, OnChanges, Renderer, SimpleChange} from "@angular/core";
+import {Attribute, Directive, ElementRef, HostListener, Input, OnChanges, Renderer2, SimpleChange} from "@angular/core";
 
 @Directive({
   selector: '[asbDraggable]'
@@ -16,16 +16,16 @@ export class AsbDraggableDirective implements OnChanges {
 
   constructor(private element: ElementRef,
               @Attribute('asbDraggableType') private draggableType,
-              private renderer: Renderer) {
+              private renderer: Renderer2) {
   }
 
   ngOnChanges(changes: { [propName: string]: SimpleChange }) {
     let change: SimpleChange = changes['isDraggable'];
 
     if (change && change.currentValue) {
-      this.renderer.setElementAttribute(this.element.nativeElement, 'draggable', 'true');
+      this.renderer.setAttribute(this.element.nativeElement, 'draggable', 'true');
     } else {
-      this.renderer.setElementAttribute(this.element.nativeElement, 'draggable', 'false');
+      this.renderer.setAttribute(this.element.nativeElement, 'draggable', 'false');
     }
   }
 }
